@@ -1,0 +1,43 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class='header'>
+    <text>软微-教师日程公示</text>
+  </view>
+  <view class="login-icon">
+    <image class="login-img" src="http://img5.imgtn.bdimg.com/it/u=4267711305,702479868&fm=26&gp=0.jpg"></image>
+  </view>
+  <view class="login-from">
+
+    <!--账号-->
+    <view class="inputView">
+      <image class="nameImage" src="../../assets/images/wode.png"></image>
+      <label class="loginLab">账号</label>
+      <input class="inputText" placeholder="请输入账号" bindinput="nameInput" />
+    </view>
+    <view class="line"></view>
+
+    <!--密码-->
+    <view class="inputView">
+      <image class="keyImage" src="../../assets/images/passwd.png"></image>
+      <label class="loginLab">密码</label>
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" />
+    </view>
+    <view class="line"></view>
+
+    <!--角色-->
+    <view class="inputView">
+      <image class="keyImage" src="../../assets/images/juese.png"></image>
+      <label class="loginLab">角色</label>
+      <view class="radio-box" wx:for="{{radios}}" wx:key="item.id">
+        <lebel class="radio {{ index==sex ? 'on' : ''}}" data-index='{{index}}' data-value='{{item.value}}' bindtap="check">
+          <image wx:if='{{index==sex}}' src='../../assets/images/selected.png'></image>
+        </lebel>{{item.label}}
+      </view>
+    </view>
+
+    <!--按钮-->
+    <view class="loginBtnView">
+      <button class="loginBtn" hover-class='btn_hover' size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

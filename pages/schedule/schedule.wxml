@@ -1,0 +1,140 @@
+<!--pages/schedule/schedule.wxml-->
+<view class="page" style="height:100%">
+  <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>日程公示</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>我的日程</view>
+  </view>
+  <swiper current="{{currentData}}" class='swiper' style="height:630px" duration="300" bindchange="bindchange">
+    <!-- 日程公示 -->
+    <swiper-item>
+      <view class='swiper_con'>
+        <!-- 搜素框 -->
+        <view class="weui-search-bar">
+          <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+              </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+            </label>
+          </view>
+          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+          <!-- <view wx:for="{{teachers}}">  -->
+          <navigator url="/pages/search/search" class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+              <view>莫同</view>
+            </view>
+          </navigator>
+          <!-- </view> -->
+        </view>
+
+        <!-- 日程公示 -->
+        <view class="con-wrap ripple {{cardRightIn?'fadeInRight':''}} {{cardLeftIn?'fadeInLeft':''}}" wx:for="{{week_richeng}}" wx:if="{{index==currentIndex}}" wx:key="{{item._id}}"> 
+          <view class='card-box' data-index="{{index}}">
+            <view class="top">
+              <view class="top-text">
+                <view>{{month}}</view>
+                <view>月</view>
+              </view>
+              <view wx:for="{{item.week_day}}" class="top-text">
+                <view class='{{item.k}}'>
+                  <view>{{item.week}}</view>
+                  <view>{{item.day}}</view>
+                </view>
+              </view>
+            </view>
+
+
+            <!-- 日程展示 -->
+            <view style="height:100%;width:100%;display:flex;">
+              <view style="background-color:#f8f8f8;color:#666666;">
+
+                <view class='morining-date'>
+                  <scroll-view class="quotation-wrapper" style="height:100%;" scroll-y="true">
+                    
+                    <view class="list-container " wx:for="{{teacherdata}}" >
+                    <!--
+                      <text class="flex-row-teacher"></text>-->
+                     
+                      <view class="flex-column flex-cell">
+                       <view class="morining" style="background-color:#f8f8f8;color:#666666;">
+                           {{item.teachername}}
+                      </view>
+                        <!--早上-->
+                        <view class="flex-row flex-cell">
+                          <text class="flex-cell flex-row">上午</text>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[0]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[1]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[2]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[3]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[4]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[5]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.morning[6]}}</navigator>
+                        </view>
+                        <!--下午-->
+                        <view class="flex-row flex-cell">
+                        <text class="flex-cell flex-row">下午</text>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[0]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[1]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[2]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[3]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[4]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[5]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.afternoon[6]}}</navigator>
+                        <!--晚上-->
+                        </view><view class="flex-row flex-cell">
+                        <text class="flex-cell flex-row">晚上</text>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[0]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[1]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[2]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[3]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[4]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[5]}}</navigator>
+                          <navigator class="flex-cell flex-row" url="../detailed/detailed?index={{item.name}}">{{item.evening[6]}}</navigator>
+                        </view>
+                      </view>
+                      
+                    </view>
+                  </scroll-view>
+                </view> 
+
+
+              </view>
+            </view>   <!-- 到展示框结束 -->
+
+            
+
+          </view>
+        </view>
+
+      </view>
+    </swiper-item>
+    
+    <!-- 我的日程 -->
+    <swiper-item>
+      <view class='swiper_con'>
+        <calendar weeks-type="cn" cell-size="30" calendar-style="calendar" header-style="header" remark_show="true" circle_show="true" next="{{false}}" prev="{{false}}" show-more-days="{{true}}" days-color="{{days_style}}" />
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>
+         <navigator url='/pages/quickadd/quickadd'>
+            <view class='pinglun_jia'>
+              <image src='/assets/images/icon-edit.png'></image>
+            </view>
+          </navigator>
+ <view class="weui-footer" >
+            <view class="weui-footer__links">
+                <navigator url="" class="weui-footer__link">底部链接</navigator>
+                <navigator url="" class="weui-footer__link">底部链接</navigator>
+            </view>
+            <view class="weui-footer__text">Copyright © 2018-2019 rw.teacherDate</view>
+        </view>

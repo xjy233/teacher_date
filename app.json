@@ -1,0 +1,58 @@
+  
+  {
+  "pages":[
+    
+    "pages/schedule/schedule",
+    "pages/login/login",
+    "pages/detailed/detailed",
+    "pages/search/search",
+    "pages/quickadd/quickadd",
+    "pages/me/me",
+    "pages/history/history",
+    "pages/opinion/opinion",
+    "pages/addschedule/addschedule",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/remider/remider",
+    "pages/addricheng/addricheng",
+    "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "蜜蜂行",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#9a1a23",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    
+    "list": [
+      {
+        "pagePath": "pages/schedule/schedule",
+        "text": "日程",
+        "iconPath": "assets/images/unricheng.png",
+        "selectedIconPath": "assets/images/richeng.png"
+      },
+      {
+        "pagePath": "pages/addschedule/addschedule",
+        "iconPath": "assets/images/unadd.png",
+        "selectedIconPath": "assets/images/add.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "assets/images/unwode.png",
+        "selectedIconPath": "assets/images/wode.png"
+      }
+    ]
+  },
+  "plugins":{
+    "calendar":{
+      "version":"1.1.3",
+      "provider":"wx92c68dae5a8bb046"
+    }
+  }
+}

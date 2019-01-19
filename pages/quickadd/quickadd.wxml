@@ -1,0 +1,81 @@
+<!--pages/quickadd/quickadd.wxml-->
+<!-- 快速添加日程 -->
+
+<!-- 选项卡 -->
+<view class='time_rc'>
+  <view wx:for="{{richeng}}">
+    <view bindtap="richeng" data-key='{{index}}' class="time_rc_xx {{richeng_hover==index?'hover':''}}">{{item.rc_nr}}</view>
+  </view>
+  <navigator url='/pages/addricheng/addricheng'>
+    <view class='time_rc_xx'>添加日程项</view>
+  </navigator>
+</view>
+
+<view class="con-wrap ripple {{cardRightIn?'fadeInRight':''}} {{cardLeftIn?'fadeInLeft':''}}" wx:for="{{week_richeng}}" wx:if="{{index==currentIndex}}" wx:key="{{item._id}}">
+  <view class='card-box' data-index="{{index}}">
+    <view class="top">
+      <view class="top-text">
+        <view>05</view>
+        <view>月</view>
+      </view>
+      <view wx:for="{{item.week_day}}" class="top-text">
+        <view class='{{item.k}}'>
+          <view>{{item.week}}</view>
+          <view>{{item.day}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 日程快速选 -->
+<scroll-view scroll-y="true" class="scroll">
+  <view style="height:450rpx;width:750rpx;display:flex;border-top:1px solid #e9e8e8;">
+    <!--课表-->
+    <view class='morining-date'>
+
+      <view id="panel" class="flex-column">
+        <view class="flex-cell flex-row">
+          <text class="flex-cell flex-row">上午</text>
+          <view wx:for="{{sw_rc}}" data-key='{{index}}' data-statu="open" data-index="{{index}}" bindtap="xuanze1" class="flex-cell flex-row">
+            <text wx:if="{{item.state==1}}" class="flex-cell flex-row kcb-item bg_1">{{item.rc_text}}</text>
+            <text wx:if="{{item.state==0}}" class="flex-cell flex-row">+
+            </text>           
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <text class="flex-cell flex-row">午休</text>
+          <view wx:for="{{zw_rc}}" data-key='{{index}}' data-statu="open" data-index="{{index}}" bindtap="xuanze2" class="flex-cell flex-row">
+            <text wx:if="{{item.state==1}}" class="flex-cell flex-row kcb-item bg_1">{{item.rc_text}}</text>
+            <text wx:if="{{item.state==0}}" class="flex-cell flex-row">+
+            </text>           
+          </view>         
+        </view>
+        <view class="flex-row flex-cell">
+          <text class="flex-cell flex-row">下午</text>
+          <view wx:for="{{xw_rc}}" data-key='{{index}}' data-statu="open" data-index="{{index}}" bindtap="xuanze3" class="flex-cell flex-row">
+            <text wx:if="{{item.state==1}}" class="flex-cell flex-row kcb-item bg_1">{{item.rc_text}}</text>
+            <text wx:if="{{item.state==0}}" class="flex-cell flex-row">+
+            </text>           
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <text class="flex-cell flex-row">晚上</text>
+          <view wx:for="{{ws_rc}}" data-key='{{index}}' data-statu="open" data-index="{{index}}" bindtap="xuanze4" class="flex-cell flex-row">
+            <text wx:if="{{item.state==1}}" class="flex-cell flex-row kcb-item bg_1">{{item.rc_text}}</text>
+            <text wx:if="{{item.state==0}}" class="flex-cell flex-row">+
+            </text>           
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+    
+</scroll-view>
+
+
+ <view class="bottom-button">
+      <view class="button-group" style='width:100%;position: fixed;bottom: 0;'>
+        <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+      </view>
+</view>

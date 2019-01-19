@@ -1,0 +1,5 @@
+/* pages/addricheng/addricheng.wxss */
+@import "../addschedule/addschedule";
+.textarea{
+  height:210rpx;
+}

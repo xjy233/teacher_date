@@ -1,0 +1,19 @@
+/**issuse.wxss**/
+@import "../addschedule/addschedule";
+.page{
+    background-color: #F8F8F8;
+    font-size: 15rpx;
+    /* font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif; */
+}
+.weui-cell__bd{
+  font-size: 34rpx;
+}
+.weui-cell__ft{
+  font-size: 34rpx;
+}
+.weui-textarea-counter{
+  font-size: 30rpx;
+}
+.weui-uploader__info{
+  font-size: 30rpx;
+}

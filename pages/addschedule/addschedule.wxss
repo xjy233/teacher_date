@@ -1,0 +1,35 @@
+/* pages/addschedule/addschedule.wxss */
+@import "../../assets/wxss/schedule";
+
+.float{
+  border-bottom: 1px solid #eee;
+}
+.isRuleShow {
+  display: block;
+}
+ 
+.isRuleHide {
+  display: none;
+}
+
+button {
+  padding: 10rpx;
+  margin: 20rpx;
+}
+
+.todo-item__date {
+  font-size: 28rpx;
+  display: inline-block;
+  text-align: right;
+}
+
+.todo-item__time {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  text-align: right;
+}
+
+.time-picker {
+  padding: 0rpx;
+}

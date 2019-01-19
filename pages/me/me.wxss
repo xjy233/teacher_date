@@ -1,0 +1,36 @@
+/* pages/me/me.wxss */
+@import "../../assets/wxss/common.wxss";
+
+.page{
+   background: #efefef;
+}
+.head{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  /* padding: 100rpx 0rpx;  */
+  align-items: center;  
+  justify-content: space-between;
+  background: #fff;
+  padding-bottom: 30rpx;
+  }
+
+.userinfo-avatar {
+  overflow:hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.page__bd{
+  margin-top: 30rpx;
+  background: #fff
+}
+.list view{font-size:30rpx;}
+
+.list-opinion{
+  border-bottom: 1px solid #eee;
+}

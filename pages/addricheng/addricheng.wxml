@@ -1,0 +1,71 @@
+<!--pages/addricheng/addricheng.wxml-->
+<!--pages/addschedule/addschedule.wxml-->
+<view class="page">
+  <view class="field-set">
+    <view class="create-header">
+      <todo-item todo="{{ todo }}" bindchange="handleTodoItemChange" auto-focus>
+      </todo-item>
+    </view>
+    <view class="field-item">
+      <label class="field-control">
+        <input class="weui-input" placeholder='请输入日程名称' />
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-control">
+        <textarea class="field-input w-full textarea" placeholder="日程描述..." bindinput="handleDescChange">
+        </textarea>
+      </label>
+    </view>
+    
+    <view class="field-item">
+      <label class="field-label">优先级</label>
+      <label class="field-control field-right">
+        <picker class="w-full" range="{{ levels }}" value="{{ levels_index }}" bindchange="handleLevelChange">
+          {{ levels[levels_index] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">分类</label>
+      <label class="field-control field-right">
+        <picker class="w-full" range="{{ categories }}" value="{{ categories_index }}" bindchange="handleCategoriesChange">
+          {{ categories[categories_index] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">活动地点</label>
+      <label class="field-control field-right">
+        {{city}} {{district}} {{street}}
+      </label>
+    </view>
+    <view class='field-item field-switch-parent'>
+      <label class="field-label">蜜蜂提醒</label>
+      <view class='field-control field-right'>
+        <switch class='field-switch' checked bindchange="switchChange"/>
+      </view>
+      
+    </view>
+    <view class="float {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+    <view class="field-item">
+      <label class="field-label">提醒时间</label>
+      <label class='field-control field-right' bindtap='gotoReminder'>{{ repContent }}</label>
+    </view>
+    </view>
+    <view class="field-item">
+      <label class="field-label">重复日程</label>
+      <label class="field-control field-right">
+        <picker class="w-full" range="{{ repeat }}" value="{{ repeat_index }}" bindchange="handleRepeatChange">
+          {{ repeat[repeat_index] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item bottom-button">
+      <view class="button-group" style='width:100%;position: fixed;bottom: 0;width: 100%;'>
+        <button class="button button-primary" bindtap="handleSaveTap" hover-class='btn_hover'>保存</button>
+      </view>
+    </view>
+    
+  </view>
+</view>

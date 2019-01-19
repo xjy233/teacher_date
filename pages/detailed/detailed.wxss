@@ -1,0 +1,42 @@
+/* pages/detailed/detailed.wxss */
+@import "../addschedule/addschedule";
+
+.list-container{  
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.list-row{   
+  display: flex;  
+  flex-direction: row;  
+}    
+.name{  
+  font-size: 40rpx;  
+  color: #000; 
+  margin-left: 20rpx; 
+}
+
+.three{
+  margin-top: 20rpx;
+}
+
+.time{  
+  overflow:hidden; /*超出一行文字自动隐藏*/
+  text-overflow:ellipsis;/*文字隐藏后添加省略号 */
+  white-space:nowrap; /*强制不换行*/  
+  color: #9a1a23;  
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}  
+.left{
+  width: 30rpx;  
+  height:30rpx; 
+  margin-left: 20rpx; 
+} 
+.touxiang_left{
+  width: 50rpx;  
+  height:50rpx;  
+  margin-left: 20rpx;
+} 

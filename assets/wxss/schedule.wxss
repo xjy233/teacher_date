@@ -1,0 +1,129 @@
+.page {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(241, 240, 246);
+  /* padding-bottom: 100rpx; */
+  overflow: hidden;
+}
+
+button::after {
+    border: 0; 
+}
+
+.field-set {
+  background-color: #fff;
+}
+
+.field-item {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 30rpx 20rpx;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.field-right{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 50rpx
+}
+
+.field-item:last-child {
+  border-bottom: none;
+}
+
+.field-label {
+  display: block;
+  color: #999;
+  white-space: nowrap;
+  /* min-width: 100rpx; */
+  /* max-width: 150rpx; */
+  width: 150rpx;
+  text-align: center;
+}
+
+.field-control {
+  flex: 8;
+  padding: 0 0 0 32rpx;
+  font-size: 32rpx;
+}
+
+.field-input {
+  font-size: 32rpx;
+}
+
+.wx-switch-input{
+    background: #9a1a23 !important;
+    border: #9a1a23 !important; 
+    height: 46rpx !important;
+    width:82rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+    width:80rpx !important;
+    height: 46rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+    width: 40rpx !important;
+    height: 46rpx !important;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 150rpx;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  border-image: none;
+  box-shadow: none;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+
+.button-primary {
+  background-color: #9a1a23;
+  border: 1px solid #9a1a23;
+  color: #fff;
+}
+.btn_hover {
+  background-color: #7c151c;
+  border: 1px solid #7c151c;
+  color: #fff;
+}
+.button-completed {
+  background-color: #888888;
+  border: 1px solid #888888;
+  color: #fff;
+}
+
+.button-round {
+  border-radius: 300rpx;
+}
+
+.bottom-button {
+  width:auto !important;
+  padding: 0 !important;
+}

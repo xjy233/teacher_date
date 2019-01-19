@@ -1,0 +1,8 @@
+<!--pages/remider/remider.wxml-->
+<view class="sel-box">
+    <view wx:for="{{repContent}}" class="multi-selection">
+      <text class='multi-text'>{{item.message}}</text>
+      <image src="{{selectIndex[index].sureid? hasSelect : noSelect}}" class="multi-img" data-selectIndex="{{index}}" bindtap="selectRep" />
+    </view>
+  </view>
+

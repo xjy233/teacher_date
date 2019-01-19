@@ -1,0 +1,90 @@
+/* pages/quickadd/quickadd.wxss */
+@import "../schedule/schedule.wxss";
+
+.time_rc {
+  width: 720rpx;
+  margin: 20rpx auto;
+  overflow: hidden;
+}
+
+.time_rc_xx {
+  border-radius: 10rpx;
+  border: 1px solid #dcdcdc;
+  width: 165rpx;
+  height: 64rpx;
+  float: left;
+  color: #333;
+  margin-left: 8rpx;
+  margin-right: 8rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.time_rc_xx.hover {
+  background: #ffebf1;
+  border: none;
+}
+
+.none {
+  display: none;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 150rpx;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  border-image: none;
+  box-shadow: none;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+
+.button-primary {
+  background-color: #9a1a23;
+  border: 1px solid #9a1a23;
+  color: #fff;
+}
+
+.button-completed {
+  background-color: #888888;
+  border: 1px solid #888888;
+  color: #fff;
+}
+
+.button-round {
+  border-radius: 300rpx;
+}
+
+.bottom-button {
+  width:auto !important;
+  padding: 0 !important;
+}
+
+button {
+  padding: 10rpx;
+  margin: 20rpx;
+}

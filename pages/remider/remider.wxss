@@ -1,0 +1,15 @@
+/* pages/remider/remider.wxss */
+.multi-selection{
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.multi-text{
+  float: left;
+  padding: 30rpx;
+}
+.multi-img{
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+  padding: 30rpx;
+}

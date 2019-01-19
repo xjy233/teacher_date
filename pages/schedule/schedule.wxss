@@ -1,0 +1,304 @@
+/* pages/schedule/schedule.wxss */
+
+.calendar {
+    background-color:white;  /*背景色为白色*/
+    padding-top: 10px;       /*上内边距为 10px*/
+    border-radius: 15px;     /*添加边框圆角*/
+}
+.header {
+    font-size: 35rpx;
+    color: #9a1a23;   
+}
+.board {
+    color: white;
+}
+
+.tab{float: left; width: 50%;text-align: center;padding: 10rpx 0; }
+.topTabSwiper{border-bottom: 1px solid #eee; zoom: 1;}
+.topTabSwiper:after{content: ""; clear: both;display: block;}
+.tabBorer{border-bottom: 2px solid #9a1a23; color: #9a1a23;}
+.swiper{width: 100%;}
+.swiper_con{width: 100%; height: 100%;}
+
+.weui-search-bar__cancel-btn{
+  color: #9a1a23;
+}
+
+/* 课表 */
+.kcb-item {
+  border-radius: 5px;
+}
+
+.smalltext {
+  font-size: 8pt;
+  color: #333;
+  padding-left: 2px;
+}
+
+.top {
+  background-color: #fff;
+  color: #333;
+  height: 110rpx;
+  font-size: 28rpx;
+}
+
+.top-text {
+  float: left;
+}
+
+.top-text view {
+  line-height: 55rpx;
+  text-align: center;
+  display: block;
+  font-size: 28rpx;
+}
+
+.top-text {
+  width: 12.5%;
+  font-size: 9pt;
+  align-items: center;
+}
+
+.top-text2 {
+  width: 60rpx;
+  height: 100rpx;
+  display: block;
+  margin: 5rpx auto;
+  border-radius: 60rpx;
+  background: #9a1a23;
+  color: #fff;
+}
+
+.scroll {
+  height: 100%;
+  z-index: 101;
+  position: fixed;
+}
+
+.left {
+  width: 90rpx;
+  height: 100rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #e9e8e8;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.pinglun_jia {
+  width: 115rpx;
+  height: 115rpx;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 121;
+}
+
+.pinglun_jia image {
+  width: 115rpx;
+  height: 115rpx;
+}
+
+.zixun_a .icon {
+  color: #435774;
+}
+
+.time_head {
+  overflow: hidden;
+  width: 690rpx;
+  margin: 0 auto 30rpx auto;
+}
+
+page {
+  background: #fff;
+}
+
+.time_head_r {
+  font-size: 27rpx;
+  background: #00a4ff;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 286rpx;
+  float: right;
+  text-align: center;
+  color: #fff;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+}
+
+.time_head_l {
+  width: 350rpx;
+  float: left;
+}
+
+.time_head_l .icon {
+  margin-left: 10rpx;
+}
+
+.time_head_title {
+  font-size: 33rpx;
+  color: #000;
+}
+
+.time_head_title2 {
+  font-size: 23rpx;
+  color: #666;
+  line-height: 25rpx;
+}
+
+.time_head_title2 .icon {
+  font-size: 18rpx;
+}
+
+.left2 {
+  height: 60rpx;
+  color: #333;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+.morining{
+  width: 740rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  color: #333;
+  align-items: center;
+  border-bottom: 1px dashed #e9e8e8;
+  display: block;
+  text-align: center
+}
+.morining-date{
+  width: 100%;
+  background: #fff
+}
+.kebiao {
+  width: 750rpx;
+  margin-top: 0rpx;
+  position: absolute;
+  height: 60rpx;
+}
+
+.kebiao2 {
+  margin-top: 360rpx;
+}
+
+.kebiao3 {
+  margin-top: 620rpx;
+}
+
+.kebiao_bs {
+  width: 475rpx;
+  background: #f8f8f8;
+  height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+
+.kebiao_bs .icon {
+  color: #d2d2d2;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.bg_1 {
+  background: #ffebf1;
+}
+
+.bg_2 {
+  background: #ebffeb;
+}
+
+.bg_3, .bg_4, .bg_5, .bg_6 {
+  background: #ebf8ff;
+}
+
+.bg_7, .bg_8, .bg_9, .bg_10 {
+  background: #fff1eb;
+}
+
+.bg_11 {
+  background: #fffbe0;
+}
+.mbt20{margin-top: 20rpx;}
+
+.main_container {  
+    position: relative;
+    width: 100%;
+    height: 419rpx;
+}
+
+ .container {
+    position: absolute;  /*使用absolute的原因是因为为了防止第一个子视图有margin-top时，造成顶部留白的情况*/
+    width: 100%;
+} 
+
+#panel{
+  height:419rpx;
+  background:#fff;
+  font-size: 28rpx;
+}
+#panel text{
+  line-height: 30rpx;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  height: 100rpx;
+  color: #000;
+  /*gai*/
+  font-size: 28rpx;
+  line-height: 30rpx;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.flex-cell{
+  flex: 1;
+}
+
+.pinglun_jia {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 121;
+}
+
+.pinglun_jia image {
+  position:fixed;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+/*新加*/
+.list-container{
+  display: flex;
+}
+.flex-row-teacher{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  height: 300rpx;
+  width: 100rpx;
+  color: #000;
+  /*gai*/
+  font-size: 28rpx;
+  line-height: 30rpx;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd
+}
